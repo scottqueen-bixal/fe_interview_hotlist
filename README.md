@@ -1,7 +1,7 @@
 # Frontend Interview Hotlist
 
 ## Summary
-These questions and answers provide a comprehensive overview of various topics related to software development, covering areas such as JavaScript, React, HTML/CSS, SCSS, JSON, decoupled Drupal, Docker, Git, Agile methodologies, and more.
+These questions and answers provide a quick screening of various topics related to software development on Frontend, covering areas such as Git, JSON, Javascript, React, Vite, Unit testing and more.
 
 ### Junior Software Developer (1-3 years)
 
@@ -9,129 +9,100 @@ These questions and answers provide a comprehensive overview of various topics r
    - What is Git and what are its key features?
 > **Answer:** Git is a distributed version control system that allows developers to track changes to source code over time. Its key features include branching, merging, and remote collaboration.
 
-   - How do you perform a merge and resolve conflicts?
-> **Answer:** You can merge branches in Git using the `git merge` command. If there are conflicts, Git will prompt you to resolve them manually.
+   - What is a branch in Git, and how do you create one?
+> **Answer:** A branch is a separate line of development in a repository. You can create a branch using `git branch <branch-name>`
 
-For example:
-
-     ```bash
-     git merge feature-branch
-     ```
-
-#### **HTML & CSS:**
-   - What is the difference between inline, internal, and external CSS?
-> **Answer:** Inline CSS is applied directly to an HTML element using the `style` attribute. Internal CSS is defined within a `<style>` tag in the `<head>` section of an HTML document. External CSS is defined in a separate `.css` file and linked to an HTML document using the `<link>` tag.
-
-   - Explain the concept of CSS box model.
-> **Answer:** The CSS box model consists of content, padding, border, and margin. The content area is where the text and images are placed. Padding is the space between the content and the border. Border is the line that surrounds the padding and content. Margin is the space outside the border.
-
-#### **SCSS:**
-   - What is SCSS and how does it differ from CSS?
-> **Answer:** SCSS (Sassy CSS) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). It adds features like variables, nesting, mixins, and functions, which make CSS more maintainable and scalable.
-
-   - How do you use variables in SCSS?
-> **Answer:** You can define variables using the `$` symbol in SCSS.
-
-For example:
-
-     ```scss
-     $primary-color: #3498db;
-     $font-size: 16px;
-
-     body {
-       color: $primary-color;
-       font-size: $font-size;
-     }
-     ```
+   - How do you use `pull requests`?
+> **Answer:** Platforms like Github/Gitlab/Bitbucket provides tools for code review, such as `pull requests`, which allow other developers to review and comment on your code.
 
 #### **JSON:**
    - What is JSON and how is it used in web development?
 > **Answer:** JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used in web development to send data from a server to a client or vice versa.
 
-   - How do you parse JSON data in JavaScript?
-> **Answer:** You can parse JSON data using the `JSON.parse()` method in JavaScript.
-For example:
+   - What is the difference between a JSON object and an array?
+> **Answer:** A JSON object is a collection of key-value pairs, while a JSON array is a collection/list of values.
 
-     ```javascript
-     const jsonString = '{"name": "John", "age": 30}';
-     const obj = JSON.parse(jsonString);
-     console.log(obj.name); // Output: John
-     ```
+   - In JSON, what are two common ways you can reference a property in a nested object?
+
+> **Answer:** Dot Notation
+
+You can use dot notation to access a property in a nested object. For example, if you have the following JSON object:
+
+You can access the street property using the following notation:
+
+javascript
+Save
+Copy
+1
+jsonObj.address.street
+Method 2: Bracket Notation
+
+You can also use bracket notation to access a property in a nested object. For example:
+
+javascript
+Save
+Copy
+1
+jsonObj["address"]["street"]
+Method 3: Using a Variable
 
 #### **JavaScript Basics:**
-   - What is an event loop in JavaScript?
-> **Answer:** An event loop is a mechanism in JavaScript that handles asynchronous operations. It allows JavaScript to perform non-blocking I/O operations, such as reading from a file or making a network request, without blocking the execution of the main thread.
+
+   - List 3-4 of the common Javascript Data Types
+> **Answer:** Boolean, Null, Undefined, Number, String, Symbol, Array, Object
+
+   - What is a closure in JavaScript?
+> **Answer:** A closure is a combination of functions enclosed together. The inner functions have access of the other functions variables.
+
+   - What is var, let, and const? What are their differences?
+> **Answer:** `var`, `let`, and `const` are three different keywords used to declare variables. The main differences between them are:
+
+Scope :
+
+   - `var`: Function scope, meaning the variable is accessible throughout the function it's declared in.
+   - `let` and `const`: Block scope, meaning the variable is only accessible within the block it's declared in (e.g., inside an if statement or a loop).
+
+and Reassignment : 
+
+   - `var` and `let`: Variables can be reassigned.
+   - `const`: Variables cannot be reassigned.
+
+
+   - What are some common ways in JavaScript for selecting elements?
+> **Answer:**
+
+```JS
+getElementsbyClassName()
+getElementByName()
+getElementsByTagName()
+querySelector()"
+```
 
    - Explain the difference between synchronous and asynchronous JavaScript.
-> **Answer:** Synchronous code is executed sequentially, meaning that each line must complete before the next line is executed. Asynchronous code, on the other hand, allows certain tasks to run in the background without blocking the main execution thread.
+> **Answer:** `Synchronous` code is executed sequentially, meaning that each line must complete before the next line is executed. `Asynchronou`s code, on the other hand, allows certain tasks to run in the background without blocking the main execution thread.
 
 #### **React:**
-   - What is the purpose of React and why is it popular?
-> **Answer:** React is a JavaScript library for building user interfaces, particularly single-page applications. It is popular because it allows developers to build complex UIs in a declarative and efficient way.
 
-   - How do you handle state in a functional component using hooks?
-> **Answer:** You can use the `useState` hook to manage state in functional components.
+   - What’s the virtual DOM?
+> **Answer:** The virtual DOM is a copy of the website's UI stored in memory. When changes are made, it compares the changes and only updates the parts that are necessary, making it very efficient.
 
-For example:
+   - What is the difference between state and props in React?
+> **Answer:** state and props are two types of data that can be used to store and manage information in a component. State is used for data that changes within a component, while props is used for data that is passed from a parent component to a child component.
 
-     ```jsx
-     import React, { useState } from 'react';
+   - What are React Hooks? 
+> **Answer:** Hooks are functions that let us hook into React state and lifecycle features from a functional component. React Hooks cannot be used in class components. They let us write components without class.
 
-     function Counter() {
-       const [count, setCount] = useState(0);
+   - What is the purpose of the key prop in React?
+> **Answer:** The key prop helps React identify which components have changed, so it can efficiently update the DOM.
 
-       return (
-         <div>
-           <p>You clicked {count} times</p>
-           <button onClick={() => setCount(count + 1)}>
-             Click me
-           </button>
-         </div>
-       );
-     }
-     ```
-
-#### **Decoupled Drupal:**
-   - What is decoupled Drupal, and why would you use it?
-> **Answer:** Decoupled Drupal allows you to build a frontend application using a different technology stack (e.g., React, Angular) than the backend. This enables you to use the best tools and technologies for each part of the application, leading to improved performance and flexibility.
-
-   - How do you integrate a React app with Drupal?
-   - **Answer:** You can integrate a React app with Drupal by using RESTful APIs provided by Drupal. For example, you can create endpoints to fetch content from Drupal and use them in your React app.
-
-#### **Docker:**
-   - What is Docker and why is it useful in development?
-> **Answer:** Docker is a platform that allows developers to create, deploy, and run applications in lightweight, portable containers. It simplifies the development and deployment process by ensuring that applications run consistently across different environments.
-
-   - How do you create a Docker image for a Node.js application?
-> **Answer:** You can create a Docker image for a Node.js application by defining a `Dockerfile`.
-
-For example:
-
-     ```Dockerfile
-     FROM node:14
-     WORKDIR /app
-     COPY package.json .
-     RUN npm install
-     COPY . .
-     EXPOSE 3000
-     CMD ["node", "server.js"]
-     ```
-#### **Agile:**
-   - What is Agile, and what are its key principles?
-> **Answer:** Agile is a project management methodology that emphasizes iterative development, collaboration, and customer satisfaction. Key principles include working software, customer collaboration, and responding to change.
-
-   - How do you manage a sprint in an Agile project?
-> **Answer:** In an Agile project, a sprint is a time-boxed period (usually 2-4 weeks) during which a set of features is developed. You can manage a sprint by planning tasks, daily stand-ups, and sprint reviews.
 ---
 
 ### Mid-Level Software Developer (3-5 years)
 
 #### **Git:**
-   - What are the best practices for branching and merging in Git?
-> **Answer:** Best practices include using a branching strategy like Git Flow or Feature Branching. Merge conflicts should be resolved by discussing changes and finding a common solution.
+   - Can you explain the concept of rebasing and when you would use it instead of merging??
+> **Answer:** `Rebasing` rewrites commit history to make it look like changes were made on top of another branch. While `Merging` combines changes from two branches into a new commit.
 
-   - How do you use Git for code review and collaboration?
-> **Answer:** Git provides tools for code review, such as pull requests, which allow other developers to review and comment on your code. Collaboration is facilitated by using Git's branching and merging capabilities.
 
 #### **HTML & CSS:**
    - What are the different ways to center an element in CSS?
