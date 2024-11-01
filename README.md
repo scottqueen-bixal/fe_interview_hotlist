@@ -19,32 +19,12 @@ These questions and answers provide a quick screening of various topics related 
    - What is JSON and how is it used in web development?
 > **Answer:** JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used in web development to send data from a server to a client or vice versa.
 
-   - What is the difference between a JSON object and an array?
-> **Answer:** A JSON object is a collection of key-value pairs, while a JSON array is a collection/list of values.
+   - What is the difference between the structures of a JSON object and an array?
+> **Answer:** A JSON object is a collection of key-value pairs, while a JSON array is a collection/list of values. (3years)
 
    - In JSON, what are two common ways you can reference a property in a nested object?
 
-> **Answer:** Dot Notation
-
-You can use dot notation to access a property in a nested object. For example, if you have the following JSON object:
-
-You can access the street property using the following notation:
-
-javascript
-Save
-Copy
-1
-jsonObj.address.street
-Method 2: Bracket Notation
-
-You can also use bracket notation to access a property in a nested object. For example:
-
-javascript
-Save
-Copy
-1
-jsonObj["address"]["street"]
-Method 3: Using a Variable
+> **Answer:** Dot Notation `jsonObj.address.street`, or Bracket Notation `jsonObj["address"]["street"]`
 
 #### **JavaScript Basics:**
 
@@ -79,7 +59,7 @@ querySelector()"
 ```
 
    - Explain the difference between synchronous and asynchronous JavaScript.
-> **Answer:** `Synchronous` code is executed sequentially, meaning that each line must complete before the next line is executed. `Asynchronou`s code, on the other hand, allows certain tasks to run in the background without blocking the main execution thread.
+> **Answer:** `Synchronous` code is executed sequentially, meaning that each line must complete before the next line is executed. `Asynchronous` code, on the other hand, allows certain tasks to run in the background without blocking the main execution thread.
 
 #### **React:**
 
