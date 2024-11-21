@@ -265,6 +265,11 @@ For example:
    - What are the benefits of using a headless CMS?
 > **Answer:** Benefits include improved scalability, better performance, and the ability to use any frontend technology without being limited by the CMS's frontend.
 
+#### **NextJS:**
+   - We normally use a single `container` component per page (or independent widget, like login), and only use other `container` components if there's a compelling reason for doing so. Our apps have a `containers` folder and a `components` folder that we divide components between. Why might we do that?
+
+   - It is common in React/Redux application architecture is to divide your React components into two types: regular (dumb) `components` and (smart) `container` components
+
 #### **Docker:**
    - What is Kubernetes, and how does it work?
 > **Answer:** Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
