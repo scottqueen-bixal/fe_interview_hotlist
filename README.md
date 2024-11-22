@@ -196,21 +196,6 @@ For example:
        db-data:
      ```
 
-#### **Agile:**
-   - How do you manage dependencies and risks in an Agile project?
-> **Answer:** You can manage dependencies by creating a dependency graph and identifying critical paths. Risks can be identified through risk assessments and mitigation plans.
-
-   - What are the key roles in an Agile team?
-> **Answer:** Key roles include the Scrum Master, Product Owner, and Development Team. The Scrum Master facilitates the Agile process, the Product Owner prioritizes the product backlog, and the Development Team delivers the product increments.
-
-#### **General Questions:**
-    - What are some best practices you follow in your development process?
-> **Answer:** Best practices include writing clean, maintainable code, performing code reviews, and using version control systems like Git.
-    - How do you stay up-to-date with the latest trends and technologies in web development?
-> **Answer:** Staying up-to-date involves following industry blogs, attending conferences, and participating in online communities and forums.
-
----
-
 ### Senior Software Developer (5+ years)
 
 #### **JavaScript Advanced:**
@@ -218,14 +203,37 @@ For example:
 > **Answer:** Promises are objects that represent the eventual completion or failure of an asynchronous operation. async/await is a syntax sugar built on top of Promises, making asynchronous code look more synchronous.
 
    - Explain how to handle errors in JavaScript.
-   - **Answer:** You can handle errors using try/catch blocks or by chaining `.catch()` methods with Promises.
+> **Answer:** You can handle errors using try/catch blocks or by chaining `.catch()` methods with Promises.
 
 #### **React:**
    - What is React Router, and how does it work?
 > **Answer:** React Router is a library for handling routing in React applications. It allows you to define routes and navigate between different views.
 
+   - What is prop drilling and how can we mitigate it in react?
+> **Answer:** Prop drilling is a common issue in React applications where a component needs to access a prop that is not directly passed to it, but rather through a chain of intermediate components. This can lead to a situation where a prop is passed down through multiple levels of components, making the code harder to read, maintain, and debug. Context, Redux, or other state management tools.
+
    - What is the purpose of context in React?
 > **Answer:** Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+#### **Redux:**
+   - What is Redux?
+> **Answer:** Redux is a state management library for JavaScript applications, particularly popular for use with React/React frameworks. It helps manage global state by providing a single source of truth for state, making it easier to manage and debug complex applications.
+
+   - What is the Redux lifecycle?
+> - **Here's a brief overview of how Redux works:**
+> - **Store:** The store is the central hub of the Redux application. It's where the entire state of the application is stored.
+> - **Actions:** Actions are payloads that trigger state changes in the application. They're typically created by dispatching an action creator function.
+> - **Reducers:** Reducers are pure functions that take the current state and an action, and return a new state. They're responsible for updating the state based on the action.
+> - **Dispatch:** Dispatch is the process of sending an action to the store, which then triggers the reducer to update the state.
+
+#### **Next.Js:**
+
+#### **Docker:**
+   - What is Kubernetes, and how does it work?
+> **Answer:** Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+
+   - How do you manage containerized applications in Kubernetes?
+> **Answer:** You can manage containerized applications in Kubernetes by defining deployment configurations, services, and other resources. Kubernetes provides tools for scaling, rolling updates, and rolling back deployments.
 
 #### **HTML & CSS:**
    - What are the different ways to optimize CSS performance?
@@ -251,31 +259,12 @@ For example:
      }
      ```
 
-#### **JSON:**
-   - How do you validate JSON data?
-> **Answer:** You can validate JSON data using tools like JSON Schema or by manually checking the structure and values.
-
-   - What is the difference between JSON and YAML?
-   - **Answer:** JSON and YAML are both data serialization formats, but JSON is a subset of JavaScript and is more lightweight, while YAML is more human-readable and flexible.
-
 #### **Decoupled Drupal:**
    - What is the role of a headless CMS in a decoupled architecture?
 > **Answer:** A headless CMS, such as Drupal, provides an API for accessing content without rendering it on the server. This allows the frontend to be built using a different technology stack.
 
    - What are the benefits of using a headless CMS?
 > **Answer:** Benefits include improved scalability, better performance, and the ability to use any frontend technology without being limited by the CMS's frontend.
-
-#### **NextJS:**
-   - We normally use a single `container` component per page (or independent widget, like login), and only use other `container` components if there's a compelling reason for doing so. Our apps have a `containers` folder and a `components` folder that we divide components between. Why might we do that?
-
-   - It is common in React/Redux application architecture is to divide your React components into two types: regular (dumb) `components` and (smart) `container` components
-
-#### **Docker:**
-   - What is Kubernetes, and how does it work?
-> **Answer:** Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
-
-   - How do you manage containerized applications in Kubernetes?
-> **Answer:** You can manage containerized applications in Kubernetes by defining deployment configurations, services, and other resources. Kubernetes provides tools for scaling, rolling updates, and rolling back deployments.
 
 #### **Git:**
    - What is a Git hook, and how can you use it?
